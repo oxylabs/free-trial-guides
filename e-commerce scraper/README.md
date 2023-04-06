@@ -4,7 +4,7 @@ E-Commerce Scraper API by Oxylabs is a public data scraper API tailored to retri
 
 This guide will walk you through setting up Oxylabs’ E-Commerce Scraper API from scratch. Configuring it with a website of your choice will give a good grasp of the data quality, ease of integration, and whether this product is right for you. We will interact with the E-Commerce Scraper API using Python. For more programming languages and more complex examples, visit our [documentation](https://oxy.yt/LrU6). 
 
-If you have discovered this tutorial before visiting our website, you can get a free trial by visiting the [E-Commerce Scraper API](https://oxy.yt/LrYs) page and filling in the form.
+If you have discovered this tutorial before visiting our website, you can get a free trial by registering on the Oxylabs [dashboard](https://dashboard.oxylabs.io/en/), navigating to the E-Commerce Scraper API, and claiming your 7-day free trial. 
 
 <br>
 <img src="Screenshot%202022-03-28%20at%2013.23.24.png" width="400">
