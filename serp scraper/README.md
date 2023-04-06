@@ -6,11 +6,6 @@ This guide will walk you through setting up Oxylabs’ SERP Scraper API from scr
 
 If you have discovered this tutorial before visiting our website, you can get a free trial by registering on the Oxylabs [dashboard](https://dashboard.oxylabs.io/en/), navigating to the SERP Scraper API, and claiming your 7-day free trial. 
 
-Shortly after, you will receive an email with your API user credentials. You will need them to start using the SERP Scraper API, which uses basic HTTP authentication that requires sending a username and password.
-
-<img src="Screenshot 2022-08-17 at 17.11.43.png" width="400">
-<br>
-
 ## Setting up SERP Scraper API
 
 Now, let’s get into the concrete steps of integrating SERP Scraper API:
