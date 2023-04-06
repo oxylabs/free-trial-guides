@@ -6,11 +6,6 @@ This guide will walk you through setting up Oxylabs’ E-Commerce Scraper API fr
 
 If you have discovered this tutorial before visiting our website, you can get a free trial by registering on the Oxylabs [dashboard](https://dashboard.oxylabs.io/en/), navigating to the E-Commerce Scraper API, and claiming your 7-day free trial. To start using E-Commerce Scraper API, you first need to create an API user to authenticate it to E-Commerce Scraper API.
 
-Shortly after, you will receive an email with a username and password. You will need these credentials to start using the E-Commerce Scraper API.
-
-<img src="Web%20scraper%20email%20example.png" width="400">
-<br>
-
 ## Setting up E-Commerce Scraper API
 
 Now, let’s get into the concrete steps of integrating E-Commerce Scraper API:
