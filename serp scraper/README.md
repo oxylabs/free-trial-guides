@@ -4,7 +4,7 @@ SERP Scraper API by Oxylabs is a public data scraper API tailored to retrieve re
 
 This guide will walk you through setting up Oxylabs’ SERP Scraper API from scratch. As an example, we will scrape publicly available search results data from the largest search engine. Configuring this integration with our chosen search phrase will give you a good grasp of the data quality, ease of integration, and whether this product is right for you. We will interact with the SERP Scraper API using Python. For more programming languages and more complex examples, visit our [documentation](https://developers.oxylabs.io/scraper-apis/serp-scraper-api). 
 
-If you have discovered this tutorial before visiting our website, you can get a free trial by registering on the Oxylabs [dashboard](https://dashboard.oxylabs.io/en/), navigating to the SERP Scraper API, and claiming your 7-day free trial. 
+If you have discovered this tutorial before visiting our website, you can get a free trial by registering on the Oxylabs [dashboard](https://dashboard.oxylabs.io/en/), navigating to the SERP Scraper API, and claiming your 7-day free trial. To start using SERP Scraper API, you first need to create an API user to authenticate it to SERP Scraper API.
 
 ## Setting up SERP Scraper API
 
