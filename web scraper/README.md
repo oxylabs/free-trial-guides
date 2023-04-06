@@ -6,10 +6,7 @@ In this tutorial, we will show you all the unique benefits and features you may 
 
 The primary focus of this tutorial will be to walk you through a straightforward example of how to set up a Web Scraper API from scratch. We highly recommend setting this up with a website of your choosing as this would allow you to test out the quality of data gathered, ease of integration, and most importantly, if this is a product that solves your needs and is worth investing time and money into. In this example, we’ll use Python with our Web Scraper API, though if you wish to see more cases that both use other languages and are more complex, please visit our [documentation](https://oxy.yt/xr1o).
 
-If you’ve already seen this tutorial before visiting our website, the easiest way to get a free trial is by visiting the [Web Scraper API](https://oxy.yt/ir0A) page and filling in the form.
-
-<br>
-<img src="/Web%20Scraper%20API%20free%20trial%20form.png" width="400">
+If you have discovered this tutorial before visiting our website, you can get a free trial by registering on the Oxylabs [dashboard](https://dashboard.oxylabs.io/en/), navigating to the Web Scraper API, and claiming your 7-day free trial. 
 
 After filling in the form, you will receive an email with a username and password. You will need these credentials to start using the Web Scraper API.
 
@@ -21,7 +18,7 @@ After filling in the form, you will receive an email with a username and passwor
 Let’s get into the concrete steps of integrating Web Scraper API:
 
 1. Open up your IDE (integrated development environment). 
-2. Add the credentials you received on the email:
+2. Insert your Scraper API user credentials.
 
 ```python
 import requests
