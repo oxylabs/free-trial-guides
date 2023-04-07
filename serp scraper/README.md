@@ -183,5 +183,5 @@ And this is it - now you know how to set up SERP Scraper API and use it to your 
 
 ## Conclusion
 
-As you can see from this detailed example, SERP Scraper API is easy to integrate, but also it is packed with lots of valuable features. [Get in touch](https://oxy.yt/LrYs) with our sales team to further discuss your use case and find available targets for SERP Scraper API.
+As you can see from this detailed example, SERP Scraper API is easy to integrate and packed with lots of valuable features. If you are considering using SERP Scraper API, you can select and purchase a subscription plan via self-service. [Get in touch](https://oxy.yt/LrYs) with our sales team if you need more assistance or have more ambitious plans for SERP Scraper API.
 
