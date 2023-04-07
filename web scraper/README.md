@@ -151,7 +151,7 @@ with open ('scraped_website.html', 'w') as output:
 
 We hope that this quick guide showed how truly effortless it is to set up our Web Scraper API and how the whole integration process functions.
 
-As mentioned before, you can find popular scraping destinations in our [documentation](https://oxy.yt/xr1o). Get in touch with our Sales team to further discuss your use cases and what unique targets our Web Scraper API could be used for.
+As mentioned before, you can find popular scraping destinations in our [documentation](https://oxy.yt/xr1o). If you are considering using Web Scraper API, you can select and purchase a subscription plan via self-service. [Get in touch](https://oxy.yt/LrYs) with our sales team if you need more assistance or have more ambitious plans for Web Scraper API.
 
 
 
