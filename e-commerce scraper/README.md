@@ -11,7 +11,7 @@ If you have discovered this tutorial before visiting our website, you can get a 
 Now, let’s get into the concrete steps of integrating E-Commerce Scraper API:
 
 1. Open up your IDE (integrated development environment).
-2. Insert your Scraper API user credentials.
+2. Insert your API user credentials.
 
 ```python
 import requests
