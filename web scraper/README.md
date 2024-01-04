@@ -13,7 +13,7 @@ If you have discovered this tutorial before visiting our website, you can get a 
 Let’s get into the concrete steps of integrating Web Scraper API:
 
 1. Open up your IDE (integrated development environment). 
-2. Insert your Scraper API user credentials.
+2. Insert your API user credentials.
 
 ```python
 import requests
