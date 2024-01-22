@@ -1,5 +1,7 @@
 # Web Scraper API Free Trial Guide
 
+[![Oxylabs promo code](https://user-images.githubusercontent.com/129506779/250792357-8289e25e-9c36-4dc0-a5e2-2706db797bb5.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
+
 Heavy duties are a specialty of the Oxylabs’ Web Scraper API. Through its use, accessing various public pages becomes a breeze.
 
 In this tutorial, we will show you all the unique benefits and features you may want to explore to make the most out of your one-week free trial. We hope that you’ll have a much clearer view of whether this solution is for you by the end.
