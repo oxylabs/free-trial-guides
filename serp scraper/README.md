@@ -1,4 +1,5 @@
 # How to make the most of your SERP Scraper API free trial?
+[![Oxylabs promo code](https://user-images.githubusercontent.com/129506779/250792357-8289e25e-9c36-4dc0-a5e2-2706db797bb5.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
 
 SERP Scraper API by Oxylabs is a public data scraper API tailored to retrieve real-time localized search results from major search engines. This tutorial will show how to get the most use out of a one-week free trial and help you decide whether this scraping solution serves your business’s needs.
 
