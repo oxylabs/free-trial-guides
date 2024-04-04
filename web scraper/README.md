@@ -20,36 +20,38 @@ Let’s get into the concrete steps of integrating Web Scraper API:
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 ```
 
-3. Define the ‘source’ and paste the URL of the Web store you want to scrape. In this example we use [](https://books.toscrape.com) product page. 
-
-```python
-username = 'username'
-password = 'password'
-
-payload = {
-  'source': 'universal', #here we define source
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html'
-}
-```
-
-4. Post Payload to the endpoint as per example below: [](https://realtime.oxylabs.io/v1/queries)
+3. Define the ‘source’ and paste the URL of the website you want to scrape. In this example we use the [scraping sandbox](https://sandbox.oxylabs.io/products) search results page. 
 
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal', 
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html'
+    'source': 'universal', # Here we define the source
+    'url': 'https://sandbox.oxylabs.io/products'
+}
+```
+
+4. Post Payload to the [realtime endpoint](https://developers.oxylabs.io/scraper-apis/getting-started/integration-methods/realtime) as per example below:
+
+```python
+import requests
+
+username = 'USERNAME'
+password = 'PASSWORD'
+
+payload = {
+    'source': 'universal',
+    'url': 'https://sandbox.oxylabs.io/products'
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 ```
 
 5. Web Scraper API response is in `JSON`, therefore we need to access the `content` key.
@@ -57,15 +59,15 @@ response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payloa
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal',
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html'
+    'source': 'universal',
+    'url': 'https://sandbox.oxylabs.io/products'
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
 html_content = response.json()['results'][0]['content']
 ```
@@ -75,20 +77,20 @@ html_content = response.json()['results'][0]['content']
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal',
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html'
+    'source': 'universal',
+    'url': 'https://sandbox.oxylabs.io/products'
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
 html_content = response.json()['results'][0]['content']
 
-with open ('scraped_website.html', 'w') as output:
-  output.write(html_content)
+with open('scraped_website.html', 'w') as output:
+    output.write(html_content)
 ```
 
 After running the basic function, try adding parameters that will retrieve more specified data. 
@@ -96,7 +98,7 @@ After running the basic function, try adding parameters that will retrieve more 
 7. Geo-location parameters will help you collect geo-restricted data for the websites that the content is only available for certain countries. 
 
 ```python
-'geo-location': 'United States'
+    'geo-location': 'United States'
 ```
 
 ### Example:
@@ -104,49 +106,103 @@ After running the basic function, try adding parameters that will retrieve more 
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal', #here we define source
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html',
-  'geo-location': 'United States'
+    'source': 'universal',
+    'url': 'https://sandbox.oxylabs.io/products',
+    'geo-location': 'United States'
 }
- 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
 html_content = response.json()['results'][0]['content']
 
-with open ('scraped_website.html', 'w') as output:
-  output.write(html_content)
+with open('scraped_website.html', 'w') as output:
+    output.write(html_content)
 ```
 
 8. If the website uses JavaScript, use `render` parameter: 
 
 ```python
-'render': 'html'
+    'render': 'html'
 ```
 
 ### Example:
 
 ```python
 import requests
-username = 'username'
-password = 'password'
+
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal', #here we define source
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html',
-  'geo-location': 'United States',
-  'render': 'html'
+    'source': 'universal',
+    'url': 'https://sandbox.oxylabs.io/products',
+    'geo-location': 'United States',
+    'render': 'html'
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
 html_content = response.json()['results'][0]['content']
 
-with open ('scraped_website.html', 'w') as output:
-  output.write(html_content)
+with open('scraped_website.html', 'w') as output:
+    output.write(html_content)
+```
+
+9. If you want to retrieve parsed data, you can utilize the [Custom Parser](https://developers.oxylabs.io/scraper-apis/custom-parser) feature to define your own parsing logic.
+
+### Example
+
+```python
+import requests, json
+
+username = 'USERNAME'
+password = 'PASSWORD'
+
+payload = {
+    'source': 'universal',
+    'url': 'https://sandbox.oxylabs.io/products',
+    'geo-location': 'United States',
+    'parse': True,
+    'parsing_instructions': {
+        'products': {
+            '_fns': [
+                {
+                    '_fn': 'xpath',
+                    '_args': ['//div[contains(@class, "product-card")]']
+                }
+            ],
+            '_items': {
+                'Title': {
+                    '_fns': [
+                        {
+                            '_fn': 'xpath_one',
+                            '_args': ['.//h4/text()']
+                        }
+                    ]
+                },
+                'Price': {
+                    '_fns': [
+                        {
+                            '_fn': 'xpath_one',
+                            '_args': ['.//div[contains(@class, "price")]/text()']
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
+
+parsed_content = response.json()['results'][0]['content']
+
+with open('parsed_website.json', 'w') as output:
+    json.dump(parsed_content, output, indent=4)
 ```
 
 ## Conclusion
