@@ -36,7 +36,7 @@ payload = {
 }
 ```
 
-4. Post Payload to the endpoint as per the example below:
+4. Post Payload to the [realtime endpoint](https://developers.oxylabs.io/scraper-apis/getting-started/integration-methods/realtime) as per the example below:
 
 ```python
 import requests
