@@ -18,38 +18,38 @@ Now, let’s get into the concrete steps of integrating E-Commerce Scraper API:
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 ```
 
-3. Define the ‘source’ and paste the URL of the e-commerce store you want to scrape. In this example, we use the books.toscrape.com product page. 
+3. Define the ‘source’ and paste the URL of the e-commerce store you want to scrape. In this example, we use the Amazon search results page for the search term `shoes`; therefore, the source is set to `amazon`. 
 
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal_ecommerce', #here we define source
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html'
+  'source': 'amazon', # Here we define the source
+  'url': 'https://www.amazon.com/s?k=shoes'
 }
 ```
 
-4. Post Payload to the endpoint as per the example below: [](https://realtime.oxylabs.io/v1/queries)
+4. Post Payload to the endpoint as per the example below:
 
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal_ecommerce', 
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html'
+  'source': 'amazon',
+  'url': 'https://www.amazon.com/s?k=shoes'
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 ```
 
 5. As E-Commerce Scraper API delivers a response in JSON, we need to access the ‘content’ key:
@@ -57,15 +57,15 @@ response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payloa
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal_ecommerce',
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html'
+  'source': 'amazon',
+  'url': 'https://www.amazon.com/s?k=shoes'
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
 html_content = response.json()['results'][0]['content']
 ```
@@ -75,15 +75,15 @@ html_content = response.json()['results'][0]['content']
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal_ecommerce', 
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html'
+  'source': 'amazon', # Here we define the source
+  'url': 'https://www.amazon.com/s?k=shoes'
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
 html_content = response.json()['results'][0]['content']
 
@@ -96,7 +96,7 @@ After running the basic code, try adding parameters to retrieve more specified d
 7. You can set up geo-location parameters that will help you collect geo-restricted data:
 
 ```python
-'geo-location': 'United States'
+    'geo-location': 'United States'
 ```
 
 ### Example:
@@ -104,27 +104,27 @@ After running the basic code, try adding parameters to retrieve more specified d
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal_ecommerce', #here we define source
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html',
-  'geo-location': 'United States'
+    'source': 'amazon',
+    'url': 'https://www.amazon.com/s?k=shoes',
+    'geo-location': 'United States'
 }
- 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
 html_content = response.json()['results'][0]['content']
 
 with open ('scraped_website.html', 'w') as output:
-  output.write(html_content)
+    output.write(html_content)
  ```
  
  8. If the website employs JavaScript, you should use the `render` parameter: 
 
 ```python 
-'render': 'html'
+    'render': 'html',
 ```
 
 ### Example:
@@ -132,59 +132,55 @@ with open ('scraped_website.html', 'w') as output:
 ```python
 import requests
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal_ecommerce', #here we define source
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html',
-  'geo-location': 'United States',
-  'render': 'html'
+    'source': 'amazon',
+    'url': 'https://www.amazon.com/s?k=shoes',
+    'geo-location': 'United States',
+    'render': 'html'
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
 html_content = response.json()['results'][0]['content']
 
 with open ('scraped_website.html', 'w') as output:
-  output.write(html_content)
+    output.write(html_content)
 ```
 
-9. In case you want to automatically detect product data, try our adaptive parser:
+9. In case you want to automatically detect and parse product data, add the `'parse': True` parameter to enable a dedicated parser. Visit [this link](https://faq.oxylabs.info/en/articles/8832750-what-are-oxylabs-dedicated-parsers) to find a list of all the dedicated parsers:
 
 ```python
-"parser_type": "ecommerce_product",
-"parse": true
+    'parse': True
 ```
 
 ### Example:
 
 ```python
-import requests
+import requests, json
 
-username = 'username'
-password = 'password'
+username = 'USERNAME'
+password = 'PASSWORD'
 
 payload = {
-  'source': 'universal_ecommerce', #here we define source
-  'url': 'https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html',
-  'geo-location': 'United States',
-
-  'render': 'html',
-
-  'parser_type': 'ecommerce_product',
-  'parse': true
+    'source': 'amazon',
+    'url': 'https://www.amazon.com/s?k=shoes',
+    'geo-location': 'United States',
+    'render': 'html',
+    'parse': True
 }
 
-response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
+response = requests.post('https://realtime.oxylabs.io/v1/queries', json=payload, auth=(username, password))
 
-html_content = response.json()['results'][0]['content']
+parsed_content = response.json()['results'][0]['content']
 
-with open ('scraped_website.html', 'w') as output:
-  output.write(html_content)
+with open ('parsed_website.json', 'w') as output:
+    json.dump(parsed_content, output, indent=4)
 ```
 
-And this is it - now you know how to set up E-Commerce Scraper API and use it to your advantage. 
+If we don't have a dedicated parser for your target website, you can use the [Custom Parser](https://developers.oxylabs.io/scraper-apis/custom-parser) feature instead to define your own parsing logic. And this is it - now you know how to set up E-Commerce Scraper API and use it to your advantage. 
 
 ## Conclusion
 
